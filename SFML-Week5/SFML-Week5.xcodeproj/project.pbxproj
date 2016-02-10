@@ -12,21 +12,20 @@
 		980D9AE11C6B8701000FECCE /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AC21C6B8701000FECCE /* CMakeLists.txt */; };
 		980D9AE21C6B8701000FECCE /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9AC31C6B8701000FECCE /* Command.cpp */; };
 		980D9AE31C6B8701000FECCE /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9AC51C6B8701000FECCE /* CommandQueue.cpp */; };
-		980D9AE41C6B8701000FECCE /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AC71C6B8701000FECCE /* cute_image.jpg */; };
-		980D9AE51C6B8701000FECCE /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AC81C6B8701000FECCE /* Desert.png */; };
-		980D9AE61C6B8701000FECCE /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AC91C6B8701000FECCE /* Eagle.png */; };
 		980D9AE71C6B8701000FECCE /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9ACA1C6B8701000FECCE /* Entity.cpp */; };
 		980D9AE81C6B8701000FECCE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9ACD1C6B8701000FECCE /* Game.cpp */; };
-		980D9AE91C6B8701000FECCE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 980D9ACF1C6B8701000FECCE /* icon.png */; };
 		980D9AEA1C6B8701000FECCE /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9AD01C6B8701000FECCE /* Main.cpp */; };
 		980D9AEB1C6B8701000FECCE /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AD11C6B8701000FECCE /* nice_music.ogg */; };
 		980D9AEC1C6B8701000FECCE /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9AD21C6B8701000FECCE /* Player.cpp */; };
-		980D9AED1C6B8701000FECCE /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AD41C6B8701000FECCE /* Raptor.png */; };
 		980D9AEE1C6B8701000FECCE /* ResourceHolder.inl in Resources */ = {isa = PBXBuildFile; fileRef = 980D9AD61C6B8701000FECCE /* ResourceHolder.inl */; };
 		980D9AEF1C6B8701000FECCE /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9AD81C6B8701000FECCE /* SceneNode.cpp */; };
 		980D9AF01C6B8701000FECCE /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9ADA1C6B8701000FECCE /* SpriteNode.cpp */; };
 		980D9AF11C6B8701000FECCE /* StringHelpers.inl in Resources */ = {isa = PBXBuildFile; fileRef = 980D9ADD1C6B8701000FECCE /* StringHelpers.inl */; };
-		980D9AF21C6B8701000FECCE /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9ADE1C6B8701000FECCE /* World.cpp */; };
+		98B75A381C6B8C3700EEABA5 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980D9ADE1C6B8701000FECCE /* World.cpp */; };
+		98B75A391C6B8CE100EEABA5 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B75A3B1C6B8CE100EEABA5 /* Raptor.png */; };
+		98B75A3C1C6B8CF900EEABA5 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B75A3E1C6B8CF900EEABA5 /* Eagle.png */; };
+		98B75A3F1C6B8CFC00EEABA5 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B75A411C6B8CFC00EEABA5 /* Desert.png */; };
+		98B75A441C6B8EAF00EEABA5 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 98B75A431C6B8EAF00EEABA5 /* ResourcePath.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,20 +40,15 @@
 		980D9AC41C6B8701000FECCE /* Command.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Command.hpp; sourceTree = "<group>"; };
 		980D9AC51C6B8701000FECCE /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		980D9AC61C6B8701000FECCE /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
-		980D9AC71C6B8701000FECCE /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
-		980D9AC81C6B8701000FECCE /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
-		980D9AC91C6B8701000FECCE /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
 		980D9ACA1C6B8701000FECCE /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		980D9ACB1C6B8701000FECCE /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		980D9ACC1C6B8701000FECCE /* Foreach.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		980D9ACD1C6B8701000FECCE /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		980D9ACE1C6B8701000FECCE /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
-		980D9ACF1C6B8701000FECCE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		980D9AD01C6B8701000FECCE /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		980D9AD11C6B8701000FECCE /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		980D9AD21C6B8701000FECCE /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		980D9AD31C6B8701000FECCE /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		980D9AD41C6B8701000FECCE /* Raptor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raptor.png; sourceTree = "<group>"; };
 		980D9AD51C6B8701000FECCE /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		980D9AD61C6B8701000FECCE /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		980D9AD71C6B8701000FECCE /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
@@ -66,6 +60,11 @@
 		980D9ADD1C6B8701000FECCE /* StringHelpers.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringHelpers.inl; sourceTree = "<group>"; };
 		980D9ADE1C6B8701000FECCE /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		980D9ADF1C6B8701000FECCE /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
+		98B75A3A1C6B8CE100EEABA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Raptor.png; sourceTree = "<group>"; };
+		98B75A3D1C6B8CF900EEABA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Eagle.png; sourceTree = "<group>"; };
+		98B75A401C6B8CFC00EEABA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Desert.png; sourceTree = "<group>"; };
+		98B75A421C6B8EAF00EEABA5 /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		98B75A431C6B8EAF00EEABA5 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,20 +105,15 @@
 				980D9AC41C6B8701000FECCE /* Command.hpp */,
 				980D9AC51C6B8701000FECCE /* CommandQueue.cpp */,
 				980D9AC61C6B8701000FECCE /* CommandQueue.hpp */,
-				980D9AC71C6B8701000FECCE /* cute_image.jpg */,
-				980D9AC81C6B8701000FECCE /* Desert.png */,
-				980D9AC91C6B8701000FECCE /* Eagle.png */,
 				980D9ACA1C6B8701000FECCE /* Entity.cpp */,
 				980D9ACB1C6B8701000FECCE /* Entity.hpp */,
 				980D9ACC1C6B8701000FECCE /* Foreach.hpp */,
 				980D9ACD1C6B8701000FECCE /* Game.cpp */,
 				980D9ACE1C6B8701000FECCE /* Game.hpp */,
-				980D9ACF1C6B8701000FECCE /* icon.png */,
 				980D9AD01C6B8701000FECCE /* Main.cpp */,
 				980D9AD11C6B8701000FECCE /* nice_music.ogg */,
 				980D9AD21C6B8701000FECCE /* Player.cpp */,
 				980D9AD31C6B8701000FECCE /* Player.hpp */,
-				980D9AD41C6B8701000FECCE /* Raptor.png */,
 				980D9AD51C6B8701000FECCE /* ResourceHolder.hpp */,
 				980D9AD61C6B8701000FECCE /* ResourceHolder.inl */,
 				980D9AD71C6B8701000FECCE /* ResourceIdentifiers.hpp */,
@@ -129,6 +123,8 @@
 				980D9ADB1C6B8701000FECCE /* SpriteNode.hpp */,
 				980D9ADC1C6B8701000FECCE /* StringHelpers.hpp */,
 				980D9ADD1C6B8701000FECCE /* StringHelpers.inl */,
+				98B75A421C6B8EAF00EEABA5 /* ResourcePath.hpp */,
+				98B75A431C6B8EAF00EEABA5 /* ResourcePath.mm */,
 				980D9ADE1C6B8701000FECCE /* World.cpp */,
 				980D9ADF1C6B8701000FECCE /* World.hpp */,
 				980D9A6D1C6B8303000FECCE /* Resources */,
@@ -148,6 +144,9 @@
 		980D9A6D1C6B8303000FECCE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				98B75A411C6B8CFC00EEABA5 /* Desert.png */,
+				98B75A3E1C6B8CF900EEABA5 /* Eagle.png */,
+				98B75A3B1C6B8CE100EEABA5 /* Raptor.png */,
 				980D9A721C6B8303000FECCE /* sansation.ttf */,
 			);
 			name = Resources;
@@ -212,13 +211,11 @@
 			files = (
 				980D9AF11C6B8701000FECCE /* StringHelpers.inl in Resources */,
 				980D9AEE1C6B8701000FECCE /* ResourceHolder.inl in Resources */,
-				980D9AE51C6B8701000FECCE /* Desert.png in Resources */,
+				98B75A3F1C6B8CFC00EEABA5 /* Desert.png in Resources */,
 				980D9AE11C6B8701000FECCE /* CMakeLists.txt in Resources */,
-				980D9AE91C6B8701000FECCE /* icon.png in Resources */,
-				980D9AE41C6B8701000FECCE /* cute_image.jpg in Resources */,
 				980D9A731C6B8303000FECCE /* sansation.ttf in Resources */,
-				980D9AED1C6B8701000FECCE /* Raptor.png in Resources */,
-				980D9AE61C6B8701000FECCE /* Eagle.png in Resources */,
+				98B75A391C6B8CE100EEABA5 /* Raptor.png in Resources */,
+				98B75A3C1C6B8CF900EEABA5 /* Eagle.png in Resources */,
 				980D9AEB1C6B8701000FECCE /* nice_music.ogg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,14 +249,45 @@
 				980D9AE71C6B8701000FECCE /* Entity.cpp in Sources */,
 				980D9AF01C6B8701000FECCE /* SpriteNode.cpp in Sources */,
 				980D9AE01C6B8701000FECCE /* Aircraft.cpp in Sources */,
-				980D9AF21C6B8701000FECCE /* World.cpp in Sources */,
+				98B75A381C6B8C3700EEABA5 /* World.cpp in Sources */,
 				980D9AE21C6B8701000FECCE /* Command.cpp in Sources */,
 				980D9AE31C6B8701000FECCE /* CommandQueue.cpp in Sources */,
 				980D9AE81C6B8701000FECCE /* Game.cpp in Sources */,
+				98B75A441C6B8EAF00EEABA5 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		98B75A3B1C6B8CE100EEABA5 /* Raptor.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98B75A3A1C6B8CE100EEABA5 /* en */,
+			);
+			name = Raptor.png;
+			path = "SFML-Week5";
+			sourceTree = SOURCE_ROOT;
+		};
+		98B75A3E1C6B8CF900EEABA5 /* Eagle.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98B75A3D1C6B8CF900EEABA5 /* en */,
+			);
+			name = Eagle.png;
+			path = "SFML-Week5";
+			sourceTree = SOURCE_ROOT;
+		};
+		98B75A411C6B8CFC00EEABA5 /* Desert.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98B75A401C6B8CFC00EEABA5 /* en */,
+			);
+			name = Desert.png;
+			path = "SFML-Week5";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		980D9A761C6B8303000FECCE /* Debug */ = {
@@ -393,6 +421,7 @@
 				980D9A7A1C6B8303000FECCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

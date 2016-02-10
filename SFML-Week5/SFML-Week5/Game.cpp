@@ -1,6 +1,7 @@
 #include <Game.hpp>
 #include <StringHelpers.hpp>
 
+#include "ResourcePath.hpp"
 
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
@@ -15,7 +16,7 @@ Game::Game()
 {
 	mWindow.setKeyRepeatEnabled(false);
 
-	mFont.loadFromFile("Media/Sansation.ttf");
+	mFont.loadFromFile(resourcePath() + "Sansation.ttf");
 	mStatisticsText.setFont(mFont);
 	mStatisticsText.setPosition(5.f, 5.f);
 	mStatisticsText.setCharacterSize(10);

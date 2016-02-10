@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include "ResourcePath.hpp"
 
 
 World::World(sf::RenderWindow& window)
@@ -53,9 +54,9 @@ CommandQueue& World::getCommandQueue()
 
 void World::loadTextures()
 {
-	mTextures.load(Textures::Eagle, "/Users/Aytona/Documents/SFML/SFML-Week5/SFML-Week5/Eagle.png");
-	mTextures.load(Textures::Raptor, "/Users/Aytona/Documents/SFML/SFML-Week5/SFML-Week5/Raptor.png");
-	mTextures.load(Textures::Desert, "/Users/Aytona/Documents/SFML/SFML-Week5/SFML-Week5/Desert.png");
+	mTextures.load(Textures::Eagle, resourcePath() + "Eagle.png");
+	mTextures.load(Textures::Raptor, resourcePath() + "Raptor.png");
+	mTextures.load(Textures::Desert, resourcePath() + "Desert.png");
 }
 
 void World::buildScene()
