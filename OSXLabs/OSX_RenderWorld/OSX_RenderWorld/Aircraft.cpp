@@ -1,5 +1,5 @@
-#include <Book/Aircraft.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Aircraft.hpp>
+#include <ResourceHolder.hpp>
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -29,16 +29,4 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures)
 void Aircraft::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(mSprite, states);
-}
-
-unsigned int Aircraft::getCategory() const
-{
-	switch (mType)
-	{
-		case Eagle:
-			return Category::PlayerAircraft;
-
-		default:
-			return Category::EnemyAircraft;
-	}
 }
