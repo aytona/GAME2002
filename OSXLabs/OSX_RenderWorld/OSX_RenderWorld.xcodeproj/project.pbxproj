@@ -22,6 +22,9 @@
 		98CE3A251C74BAA300F89BC1 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A221C74BAA300F89BC1 /* Raptor.png */; };
 		98CE3A321C74BAAD00F89BC1 /* ResourceHolder.inl in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A2B1C74BAAD00F89BC1 /* ResourceHolder.inl */; };
 		98CE3A331C74BAAD00F89BC1 /* StringHelpers.inl in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A301C74BAAD00F89BC1 /* StringHelpers.inl */; };
+		98CE3A371C76305C00F89BC1 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A341C76305C00F89BC1 /* Fire.png */; };
+		98CE3A381C76305C00F89BC1 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A351C76305C00F89BC1 /* Grass.png */; };
+		98CE3A391C76305C00F89BC1 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A361C76305C00F89BC1 /* Water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		98CE3A2F1C74BAAD00F89BC1 /* StringHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringHelpers.hpp; sourceTree = "<group>"; };
 		98CE3A301C74BAAD00F89BC1 /* StringHelpers.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringHelpers.inl; sourceTree = "<group>"; };
 		98CE3A311C74BAAD00F89BC1 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
+		98CE3A341C76305C00F89BC1 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		98CE3A351C76305C00F89BC1 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
+		98CE3A361C76305C00F89BC1 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 		98CE39D21C74B76500F89BC1 /* OSX_RenderWorld */ = {
 			isa = PBXGroup;
 			children = (
+				98CE3A341C76305C00F89BC1 /* Fire.png */,
+				98CE3A351C76305C00F89BC1 /* Grass.png */,
+				98CE3A361C76305C00F89BC1 /* Water.png */,
 				98CE3A261C74BAAD00F89BC1 /* Aircraft.hpp */,
 				98CE3A271C74BAAD00F89BC1 /* Entity.hpp */,
 				98CE3A281C74BAAD00F89BC1 /* Foreach.hpp */,
@@ -182,6 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				98CE3A171C74BA8500F89BC1 /* CMakeLists.txt in Resources */,
+				98CE3A391C76305C00F89BC1 /* Water.png in Resources */,
+				98CE3A381C76305C00F89BC1 /* Grass.png in Resources */,
+				98CE3A371C76305C00F89BC1 /* Fire.png in Resources */,
 				98CE3A231C74BAA300F89BC1 /* Desert.png in Resources */,
 				98CE3A241C74BAA300F89BC1 /* Eagle.png in Resources */,
 				98CE3A331C74BAAD00F89BC1 /* StringHelpers.inl in Resources */,
@@ -359,6 +371,7 @@
 				98CE39E71C74B76600F89BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
