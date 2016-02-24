@@ -32,12 +32,13 @@ void World::update(sf::Time dt)
 	sf::Vector2f velocity = mPlayerAircraft->getVelocity();
 
 	// If player touches borders, flip its X velocity
-	if (position.x <= mWorldBounds.left + 150.f
-	 || position.x >= mWorldBounds.left + mWorldBounds.width - 150.f)
-	{
-		velocity.x = -velocity.x;
-		mPlayerAircraft->setVelocity(velocity);
-	}
+//	if (position.x <= mWorldBounds.left + 150.f
+//	 || position.x >= mWorldBounds.left + mWorldBounds.width - 150.f)
+//	{
+//		velocity.x = -velocity.x;
+//		mPlayerAircraft->setVelocity(velocity);
+//	}
+
 
 	// Apply movements
 	mSceneGraph.update(dt);
@@ -54,6 +55,8 @@ void World::loadTextures()
 	mTextures.load(Textures::Eagle, resourcePath() + "Eagle.png");
 	mTextures.load(Textures::Raptor,resourcePath() + "Raptor.png");
 	mTextures.load(Textures::Desert, resourcePath() + "Desert.png");
+    mTextures.load(Textures::Water, resourcePath() + "water.png");
+    mTextures.load(Textures::Grass, resourcePath() + "grass.png");
 }
 
 void World::buildScene()
@@ -68,20 +71,32 @@ void World::buildScene()
 	}
 
 	// Prepare the tiled background
-	sf::Texture& texture = mTextures.get(Textures::Desert);
+	sf::Texture& dTexture = mTextures.get(Textures::Desert);
+    sf::Texture& wTexture = mTextures.get(Textures::Water);
+    sf::Texture& gTexture = mTextures.get(Textures::Grass);
 	sf::IntRect textureRect(mWorldBounds);
-	texture.setRepeated(true);
+	dTexture.setRepeated(true);
+    wTexture.setRepeated(true);
+    gTexture.setRepeated(true);
 
 	// Add the background sprite to the scene
-	std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
-	backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
-	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
+	std::unique_ptr<SpriteNode> dSprite(new SpriteNode(dTexture, textureRect));
+    std::unique_ptr<SpriteNode> wSprite(new SpriteNode(wTexture, textureRect));
+    std::unique_ptr<SpriteNode> gSprite(new SpriteNode(gTexture, textureRect));
+    
+	dSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
+    wSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
+    gSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
+    
+	mSceneLayers[Background]->attachChild(std::move(dSprite));
+    mSceneLayers[Background]->attachChild(std::move(wSprite));
+    mSceneLayers[Background]->attachChild(std::move(gSprite));
 
 	// Add player's aircraft
 	std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
 	mPlayerAircraft = leader.get();
 	mPlayerAircraft->setPosition(mSpawnPosition);
-	mPlayerAircraft->setVelocity(40.f, mScrollSpeed);
+	// mPlayerAircraft->setVelocity(0.f, mScrollSpeed);
 	mSceneLayers[Air]->attachChild(std::move(leader));
 
 	// Add two escorting aircrafts, placed relatively to the main plane

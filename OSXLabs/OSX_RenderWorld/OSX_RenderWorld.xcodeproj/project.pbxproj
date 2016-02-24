@@ -23,8 +23,8 @@
 		98CE3A321C74BAAD00F89BC1 /* ResourceHolder.inl in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A2B1C74BAAD00F89BC1 /* ResourceHolder.inl */; };
 		98CE3A331C74BAAD00F89BC1 /* StringHelpers.inl in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A301C74BAAD00F89BC1 /* StringHelpers.inl */; };
 		98CE3A371C76305C00F89BC1 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A341C76305C00F89BC1 /* Fire.png */; };
-		98CE3A381C76305C00F89BC1 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A351C76305C00F89BC1 /* Grass.png */; };
-		98CE3A391C76305C00F89BC1 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CE3A361C76305C00F89BC1 /* Water.png */; };
+		98F5E4A91C7BFF71000882FD /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F5E4A81C7BFF71000882FD /* grass.png */; };
+		98F5E4AB1C7BFF85000882FD /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F5E4AA1C7BFF85000882FD /* water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +57,8 @@
 		98CE3A301C74BAAD00F89BC1 /* StringHelpers.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringHelpers.inl; sourceTree = "<group>"; };
 		98CE3A311C74BAAD00F89BC1 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
 		98CE3A341C76305C00F89BC1 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
-		98CE3A351C76305C00F89BC1 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
-		98CE3A361C76305C00F89BC1 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
+		98F5E4A81C7BFF71000882FD /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		98F5E4AA1C7BFF85000882FD /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +91,9 @@
 		98CE39D21C74B76500F89BC1 /* OSX_RenderWorld */ = {
 			isa = PBXGroup;
 			children = (
+				98F5E4AA1C7BFF85000882FD /* water.png */,
+				98F5E4A81C7BFF71000882FD /* grass.png */,
 				98CE3A341C76305C00F89BC1 /* Fire.png */,
-				98CE3A351C76305C00F89BC1 /* Grass.png */,
-				98CE3A361C76305C00F89BC1 /* Water.png */,
 				98CE3A261C74BAAD00F89BC1 /* Aircraft.hpp */,
 				98CE3A271C74BAAD00F89BC1 /* Entity.hpp */,
 				98CE3A281C74BAAD00F89BC1 /* Foreach.hpp */,
@@ -191,15 +191,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				98CE3A171C74BA8500F89BC1 /* CMakeLists.txt in Resources */,
-				98CE3A391C76305C00F89BC1 /* Water.png in Resources */,
-				98CE3A381C76305C00F89BC1 /* Grass.png in Resources */,
 				98CE3A371C76305C00F89BC1 /* Fire.png in Resources */,
 				98CE3A231C74BAA300F89BC1 /* Desert.png in Resources */,
+				98F5E4A91C7BFF71000882FD /* grass.png in Resources */,
 				98CE3A241C74BAA300F89BC1 /* Eagle.png in Resources */,
 				98CE3A331C74BAAD00F89BC1 /* StringHelpers.inl in Resources */,
 				98CE3A321C74BAAD00F89BC1 /* ResourceHolder.inl in Resources */,
 				98CE3A251C74BAA300F89BC1 /* Raptor.png in Resources */,
 				98CE3A1F1C74BA9200F89BC1 /* Sansation.ttf in Resources */,
+				98F5E4AB1C7BFF85000882FD /* water.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

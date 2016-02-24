@@ -2,6 +2,7 @@
 #define GAME_HPP
 
 #include <World.hpp>
+#include <Aircraft.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Keyboard.hpp>
@@ -27,6 +28,7 @@ class Game : private sf::NonCopyable
 		
 
 	private:
+        static const float      PlayerSpeed;
 		static const sf::Time	TimePerFrame;
 
 		sf::RenderWindow		mWindow;
@@ -36,6 +38,13 @@ class Game : private sf::NonCopyable
 		sf::Text				mStatisticsText;
 		sf::Time				mStatisticsUpdateTime;
 		std::size_t				mStatisticsNumFrames;
+        Aircraft*               mPlayer;
+    
+        bool                    mIsMovingUp;
+        bool                    mIsMovingDown;
+        bool                    mIsMovingRight;
+        bool                    mIsMovingLeft;
+        float                   mScrollSpeed;
 };
 
 #endif // GAME_HPP

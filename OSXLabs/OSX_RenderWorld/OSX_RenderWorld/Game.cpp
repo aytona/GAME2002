@@ -3,6 +3,7 @@
 
 #include <SFML/Window/Event.hpp>
 
+const float Game::PlayerSpeed = 100.f;
 
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
@@ -13,6 +14,12 @@ Game::Game()
 , mStatisticsText()
 , mStatisticsUpdateTime()
 , mStatisticsNumFrames(0)
+, mIsMovingUp(false)
+, mIsMovingDown(false)
+, mIsMovingRight(false)
+, mIsMovingLeft(false)
+, mPlayer(nullptr)
+, mScrollSpeed(-50.f)
 {
 	mFont.loadFromFile("Media/Sansation.ttf");
 	mStatisticsText.setFont(mFont);
@@ -95,6 +102,14 @@ void Game::updateStatistics(sf::Time elapsedTime)
 	}
 }
 
-void Game::handlePlayerInput(sf::Keyboard::Key, bool)
+void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
 {
+    if (key == sf::Keyboard::W)
+        mIsMovingUp = isPressed;
+    else if (key == sf::Keyboard::S)
+        mIsMovingDown = isPressed;
+    else if (key == sf::Keyboard::A)
+        mIsMovingLeft = isPressed;
+    else if (key == sf::Keyboard::D)
+        mIsMovingRight = isPressed;
 }
