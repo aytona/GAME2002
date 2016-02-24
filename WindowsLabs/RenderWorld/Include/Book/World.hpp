@@ -26,7 +26,8 @@ class World : private sf::NonCopyable
 		explicit							World(sf::RenderWindow& window);
 		void								update(sf::Time dt);
 		void								draw();
-
+		Aircraft*							mPlayerAircraft;
+		//Aircraft*							getAircraft();
 
 	private:
 		void								loadTextures();
@@ -53,7 +54,6 @@ class World : private sf::NonCopyable
 		sf::FloatRect						mWorldBounds;
 		sf::Vector2f						mSpawnPosition;
 		float								mScrollSpeed;
-		Aircraft*							mPlayerAircraft;
+		
 };
-
 #endif // BOOK_WORLD_HPP

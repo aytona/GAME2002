@@ -36,6 +36,19 @@ class Game : private sf::NonCopyable
 		sf::Text				mStatisticsText;
 		sf::Time				mStatisticsUpdateTime;
 		std::size_t				mStatisticsNumFrames;
+
+#pragma region Assignment_Declarations
+
+		//Aircraft* World::getAircraft;
+		//Aircraft*				mPlayer;
+		sf::Texture				mTexture;
+		static const float		PlayerSpeed;
+		bool					mIsMovingUp;
+		bool					mIsMovingDown;
+		bool					mIsMovingRight;
+		bool					mIsMovingLeft;
+
+#pragma endregion Assignment_Declarations
 };
 
 #endif // BOOK_GAME_HPP
