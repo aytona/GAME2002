@@ -74,6 +74,18 @@ void Game::processEvents()
 void Game::update(sf::Time elapsedTime)
 {
 	mWorld.update(elapsedTime);
+    
+//    sf::Vector2f movement(0.f, 0.f);
+//    if (mIsMovingUp)
+//        movement.y -= PlayerSpeed;
+//    if (mIsMovingDown)
+//        movement.y += PlayerSpeed;
+//    if (mIsMovingLeft)
+//        movement.x -= PlayerSpeed;
+//    if (mIsMovingRight)
+//        movement.x += PlayerSpeed;
+//    
+//    mPlayer->move(movement * elapsedTime.asSeconds());
 }
 
 void Game::render()

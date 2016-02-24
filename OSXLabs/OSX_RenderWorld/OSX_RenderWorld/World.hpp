@@ -38,7 +38,7 @@ class World : private sf::NonCopyable
 		{
 			Background,
 			Air,
-			LayerCount
+			LayerCount,
 		};
 
 

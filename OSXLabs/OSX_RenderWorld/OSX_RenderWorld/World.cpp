@@ -12,7 +12,7 @@ World::World(sf::RenderWindow& window)
 , mSceneLayers()
 , mWorldBounds(0.f, 0.f, mWorldView.getSize().x, 2000.f)
 , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldBounds.height - mWorldView.getSize().y / 2.f)
-, mScrollSpeed(-50.f)
+, mScrollSpeed(-200.f)
 , mPlayerAircraft(nullptr)
 {
 	loadTextures();
@@ -85,10 +85,25 @@ void World::buildScene()
     std::unique_ptr<SpriteNode> gSprite(new SpriteNode(gTexture, textureRect));
     
 	dSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
-    wSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
-    gSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
+    wSprite->setPosition(mWorldBounds.left, mWorldBounds.top - 500.f);
+    gSprite->setPosition(mWorldBounds.left, mWorldBounds.top - 1000.f);
     
-	mSceneLayers[Background]->attachChild(std::move(dSprite));
+    if (dSprite->getPosition().y > mWorldView.getCenter().y - 500.f)
+    {
+        dSprite->move(mWorldBounds.left, mWorldView.getCenter().y - 1500.f);
+    }
+    
+    if (wSprite->getPosition().y > mWorldView.getCenter().y - 500.f)
+    {
+        wSprite->move(mWorldBounds.left, mWorldView.getCenter().y - 1500.f);
+    }
+    
+    if (gSprite->getPosition().y > mWorldView.getCenter().y - 500.f)
+    {
+        gSprite->move(mWorldBounds.left, mWorldView.getCenter().y - 1500.f);
+    }
+    
+    mSceneLayers[Background]->attachChild(std::move(dSprite));
     mSceneLayers[Background]->attachChild(std::move(wSprite));
     mSceneLayers[Background]->attachChild(std::move(gSprite));
 
@@ -96,7 +111,7 @@ void World::buildScene()
 	std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
 	mPlayerAircraft = leader.get();
 	mPlayerAircraft->setPosition(mSpawnPosition);
-	// mPlayerAircraft->setVelocity(0.f, mScrollSpeed);
+	mPlayerAircraft->setVelocity(0.f, mScrollSpeed);
 	mSceneLayers[Air]->attachChild(std::move(leader));
 
 	// Add two escorting aircrafts, placed relatively to the main plane
