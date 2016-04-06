@@ -23,6 +23,9 @@ PauseState::PauseState(StateStack& stack, Context context)
 	centerOrigin(mPausedText);
 	mPausedText.setPosition(0.5f * windowSize.x, 0.4f * windowSize.y);
 
+    
+
+    
 	auto returnButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
 	returnButton->setPosition(0.5f * windowSize.x - 100, 0.4f * windowSize.y + 75);
 	returnButton->setText("Return");
@@ -39,9 +42,19 @@ PauseState::PauseState(StateStack& stack, Context context)
 		requestStateClear();
 		requestStackPush(States::Menu);
 	});
-
+    
+    auto quitButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
+    quitButton->setPosition(0.5f * windowSize.x - 100, 0.4f* windowSize.y + 25);
+    quitButton->setText("Quit");
+    quitButton->setCallback([this] ()
+                            {
+                                requestStateClear();
+                            });
+    
+    mGUIContainer.pack(quitButton);
 	mGUIContainer.pack(returnButton);
 	mGUIContainer.pack(backToMenuButton);
+    
 }
 
 void PauseState::draw()

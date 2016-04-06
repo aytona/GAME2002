@@ -13,6 +13,15 @@ MenuState::MenuState(StateStack& stack, Context context)
 {
 	sf::Texture& texture = context.textures->get(Textures::TitleScreen);
 	mBackgroundSprite.setTexture(texture);
+    
+    auto titleButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
+    titleButton->setPosition(100, 200);
+    titleButton->setText("Title");
+    titleButton->setCallback([this]()
+    {
+        requestStackPop();
+        requestStackPush(States::Title);
+    });
 
 	auto playButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
 	playButton->setPosition(100, 250);
@@ -39,6 +48,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 		requestStackPop();
 	});
 
+    mGUIContainer.pack(titleButton);
 	mGUIContainer.pack(playButton);
 	mGUIContainer.pack(settingsButton);
 	mGUIContainer.pack(exitButton);
