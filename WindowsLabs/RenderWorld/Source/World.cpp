@@ -31,12 +31,12 @@ void World::update(sf::Time dt)
 	sf::Vector2f velocity = mPlayerAircraft->getVelocity();
 
 	// If player touches borders, flip its X velocity
-	if (position.x <= mWorldBounds.left + 150.f
+	/*if (position.x <= mWorldBounds.left + 150.f
 	 || position.x >= mWorldBounds.left + mWorldBounds.width - 150.f)
 	{
 		velocity.x = -velocity.x;
 		mPlayerAircraft->setVelocity(velocity);
-	}
+	}*/
 
 	// Apply movements
 	mSceneGraph.update(dt);
@@ -53,6 +53,14 @@ void World::loadTextures()
 	mTextures.load(Textures::Eagle, "Media/Textures/Eagle.png");
 	mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
 	mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
+
+#pragma region Added_Textures
+
+	// Load the other 2 background textures
+	mTextures.load(Textures::Grass, "Media/Textures/Grass.png");
+	mTextures.load(Textures::Water, "Media/Textures/Water.png");
+
+#pragma endregion Added_Textures
 }
 
 void World::buildScene()
@@ -76,11 +84,35 @@ void World::buildScene()
 	backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
 	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
+#pragma region Added_Background
+
+	// Add the grass background sprite to the scene
+	sf::Texture& grassTexture = mTextures.get(Textures::Grass);
+	grassTexture.setRepeated(true);
+	std::unique_ptr<SpriteNode> grassSprite(new SpriteNode(grassTexture, textureRect));
+	grassSprite->setPosition(mWorldBounds.left, mWorldBounds.top - 500.f);
+	mSceneLayers[Background]->attachChild(std::move(grassSprite));
+
+	// Add the water background sprite to the scene
+	sf::Texture& waterTexture = mTextures.get(Textures::Water);
+	waterTexture.setRepeated(true);
+	std::unique_ptr<SpriteNode> waterSprite(new SpriteNode(waterTexture, textureRect));
+	waterSprite->setPosition(mWorldBounds.left, mWorldBounds.top - 1000.f);
+	mSceneLayers[Background]->attachChild(std::move(waterSprite));
+
+#pragma endregion Added_Background
+
+#pragma region Looping_Background
+
+
+
+#pragma endregion Looping_Background
+
 	// Add player's aircraft
 	std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
 	mPlayerAircraft = leader.get();
 	mPlayerAircraft->setPosition(mSpawnPosition);
-	mPlayerAircraft->setVelocity(40.f, mScrollSpeed);
+	mPlayerAircraft->setVelocity(0.f, mScrollSpeed);
 	mSceneLayers[Air]->attachChild(std::move(leader));
 
 	// Add two escorting aircrafts, placed relatively to the main plane
